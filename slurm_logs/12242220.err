@@ -1,0 +1,55 @@
+/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+  0%|          | 0/677 [00:00<?, ?it/s]  0%|          | 0/677 [01:38<?, ?it/s]
+Traceback (most recent call last):
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 94, in <module>
+    main()
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 86, in main
+    output_b = musicgen.generate(descriptions=initial_caption_augmented_qualities, progress=True)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/genmodel.py", line 167, in generate
+    return self.generate_audio(tokens)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/genmodel.py", line 269, in generate_audio
+    gen_audio = self.compression_model.decode(gen_tokens, None)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/encodec.py", line 256, in decode
+    out = self.decoder(emb)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/modules/seanet.py", line 257, in forward
+    y = self.model(z)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/modules/conv.py", line 201, in forward
+    return self.conv(x)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/modules/conv.py", line 112, in forward
+    x = self.conv(x)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 310, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 306, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: GET was unable to find an engine to execute this computation

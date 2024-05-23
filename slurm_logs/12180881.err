@@ -1,0 +1,3 @@
+WARNING: You are using pip version 21.2.4; however, version 24.0 is available.
+You should consider upgrading via the '/fs01/home/robzeh/projects/mugen/clap_venv/bin/python -m pip install --upgrade pip' command.
+slurmstepd: error: *** JOB 12180881 ON gpu077 CANCELLED AT 2024-03-23T19:33:36 ***

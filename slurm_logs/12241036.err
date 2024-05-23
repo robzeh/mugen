@@ -1,0 +1,40 @@
+/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/cuda/__init__.py:138: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11040). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/amp/autocast_mode.py:250: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+Traceback (most recent call last):
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 94, in <module>
+    main()
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 47, in main
+    musicgen = MusicGen.get_pretrained("facebook/musicgen-large")
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/musicgen.py", line 86, in get_pretrained
+    lm = load_lm_model(name, device=device)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/loaders.py", line 114, in load_lm_model
+    model = builders.get_lm_model(cfg)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/builders.py", line 98, in get_lm_model
+    condition_provider = get_conditioner_provider(kwargs["dim"], cfg).to(cfg.device)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/models/builders.py", line 140, in get_conditioner_provider
+    conditioners[str(cond)] = T5Conditioner(output_dim=output_dim, device=device, **model_args)
+  File "/fs01/home/robzeh/projects/audiocraft/audiocraft/modules/conditioners.py", line 427, in __init__
+    self.__dict__['t5'] = t5.to(device)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 2460, in to
+    return super().to(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/cuda/__init__.py", line 298, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: The NVIDIA driver on your system is too old (found version 11040). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver.

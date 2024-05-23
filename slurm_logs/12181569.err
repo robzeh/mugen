@@ -1,0 +1,7 @@
+
+[notice] A new release of pip is available: 23.0.1 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+Traceback (most recent call last):
+  File "/fs01/home/robzeh/projects/mugen/generate_unconditional.py", line 6, in <module>
+    from audiocraft.models import MusicGen
+ModuleNotFoundError: No module named 'audiocraft'

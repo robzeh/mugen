@@ -1,0 +1,26 @@
+#!/bin/sh
+# Node resource configurations
+#SBATCH --job-name=mugenq
+#SBATCH --mem=80G
+#SBATCH --cpus-per-task=30
+#SBATCH --gres=gpu:1
+#SBATCH --qos=normal
+#SBATCH --output=./%j.out
+#SBATCH --error=./%j.err
+
+# Append is important because otherwise mpreemption resets the file
+#SBATCH --open-mode=append
+
+echo `date`: Job $SLURM_JOB_ID is allocated resource
+
+# the recommendation is to keep erything that defines the workload itself in a separate script
+bash run_musicgen_baselines.sh
+
+echo `date`: "Job $SLURM_JOB_ID finished running, exit code: $?"
+
+date=$(date '+%Y-%m-%d')
+archive=$HOME/finished_jobs/$date/$SLURM_JOB_ID
+mkdir -p $archive
+
+cp ./$SLURM_JOB_ID.out $archive/job.out
+cp ./$SLURM_JOB_ID.err $archive/job.err

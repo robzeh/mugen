@@ -1,0 +1,5 @@
+Mon Apr 1 23:25:24 EDT 2024: Job 12241035 is allocated resource
+[23:25:57] MusicCaps length: 5410             generate_qualities_augmented.py:37
+           Already generated 0 files          generate_qualities_augmented.py:38
+           Left to generate: 5410             generate_qualities_augmented.py:40
+Mon Apr 1 23:26:12 EDT 2024: Job 12241035 finished running, exit code: 1

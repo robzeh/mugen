@@ -1,0 +1,23 @@
+ERROR: Could not install packages due to an OSError: [Errno 122] Disk quota exceeded
+
+WARNING: You are using pip version 21.2.4; however, version 24.0 is available.
+You should consider upgrading via the '/fs01/home/robzeh/projects/raptune/raptune_venv/bin/python -m pip install --upgrade pip' command.
+/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+  0%|          | 0/677 [00:00<?, ?it/s]  0%|          | 0/677 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 101, in <module>
+    main()
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/fs01/home/robzeh/projects/raptune/raptune_venv/lib/python3.9/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 88, in main
+    initial_caption_augmented_qualities = [f"{metadata_caption_b[i]} {augmented_qualities[i]}" for i in range(len(metadata_caption_b))] 
+  File "/fs01/home/robzeh/projects/mugen/generate_qualities_augmented.py", line 88, in <listcomp>
+    initial_caption_augmented_qualities = [f"{metadata_caption_b[i]} {augmented_qualities[i]}" for i in range(len(metadata_caption_b))] 
+IndexError: list index out of range
